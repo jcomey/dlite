@@ -1,0 +1,77 @@
+<!--index.wxml
+<view class="container">
+ 
+    <view class="userinfo" bindtap="login">
+        <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
+            background-size="cover"
+        ></image>
+        <view>
+            <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击测试登录接口'}}</text>
+            <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+        </view>
+    </view>
+
+ 
+    <view class="uploader">
+        <view class="uploader-text" bindtap="doUpload">
+            <text>上传图片</text>
+        </view>
+        <view class="uploader-container" wx:if="{{imgUrl}}">
+            <image
+                class="uploader-image"
+                src="{{imgUrl}}"
+                mode="aspectFit"
+                bindtap="previewImg"
+            ></image>
+        </view>
+    </view>
+
+ 
+    <view class="uploader">
+        <navigator url="../addCgi/addCgi" open-type="navigate" class="uploader-text">
+            <text>快速增加 CGI</text>
+        </navigator>
+    </view>
+ 
+    </view>
+ 
+-->
+<!-- <swiper>
+
+<swiper-item>
+<image src='http://img.lookcss.com/spr13.jpg' style='width:100%' mode='widthFix'></image>
+
+</swiper-item>
+<swiper-item>
+<image src='http://img.lookcss.com/spr10.jpg' style='width:100%' mode='widthFix'></image>
+
+</swiper-item>
+
+<swiper-item>
+<image src='http://img.lookcss.com/spr12.jpg' style='width:100%' mode='widthFix'></image>
+
+</swiper-item>
+</swiper> -->
+
+
+<scroll-view scroll-x>
+  <view class='sc-view'>
+    <view class='sw-icon'>
+      <navigator url='/pages/moveCar/moveCar'>
+        <image src='/style/img/icon-car.svg' class="home-icon"></image>
+        <view>一键挪车</view>
+      </navigator>
+    </view>
+
+    <view class='sw-icon'>
+      <navigator url='/pages/usefulTel/usefulTel'>
+        <image src='/style/img/icon-phone.svg' class="home-icon"></image>
+        <view>常用电话</view>
+      </navigator>
+    </view>
+
+  </view>
+</scroll-view>
+

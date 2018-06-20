@@ -1,0 +1,13 @@
+/* pages/addCarnum/addCarnum.wxss */
+.hide{display: none;}
+.show{display: block}
+.mt10{margin-top: 10px;}
+ .btn{margin:10px;background: #007AFF;color: #fff;}
+   
+    .section input{background: #fff;  width: 100%;
+    line-height: 52px;
+    font-size: 1.2rem;
+    color: #007AFF;
+    padding:0 0 0 40rpx}
+    .result{text-align: center;color: #e00;}
+ 

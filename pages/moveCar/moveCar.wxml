@@ -1,0 +1,30 @@
+<form bindsubmit="formSubmit" report-submit="true">
+<view class="section">
+ 
+  <input type='text' placeholder='输入车牌号' name="inputData" maxlength='7' bindinput='inputCarnum' value='{{user_carnum}}' ></input>
+  <image bindtap="doUpload" src="/style/img/up-img.png" class="up-img"></image>
+</view>
+
+
+ 
+<view>
+  <button  bindtap='formSubmit'  formType="submit" class='btn'>查询挪车电话</button>
+</view>
+</form>
+
+<view class="phone {{showView?'show':'hide'}}">
+  <button class='phone-txt' type='primary'    bindtap='makeCall'>{{Phone}}</button>
+</view>
+<view class="">
+ 
+  <view class="uploader-container" wx:if="{{imgUrl}}">
+    <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+  </view>
+</view>
+<!-- <view class='tip'>
+  <text class='text-mute'>为方便小区内挪车使用，请各位车主填写您的挪车电话！</text>
+</view> -->
+
+
+
+

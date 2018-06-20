@@ -1,0 +1,50 @@
+<view>
+  <form>
+
+
+
+    <view class="weui-cells__title">车牌号</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd" style="width: 105px">
+          <picker mode="multiSelector" bindchange="bindMultiPickerChange" value='{{multiIndex}}' range-key="" range="{{multiArray}}">
+
+            <view class="weui-select">{{multiArray[0][multiIndex[0]]}} · {{multiArray[1][multiIndex[1]]}}</view>
+
+          </picker>
+        </view>
+        <view class="weui-cell__bd weui-cell__bd_in-select-before">
+          <input class="weui-input" name="user_carnum" value='{{user_carnum}}' placeholder="请输入车牌号" maxlength='5'  bindinput='inputCarnum' />
+        </view>
+      </view>
+    </view>
+
+
+
+
+    <!-- <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="如:豫E9999A" id="user_carnum" name="user_carnum" bindinput='inputCarnum' bindblur='checkRepeat' maxlength='7' />
+        </view>
+      </view>   
+    </view>  -->
+
+    <view class="weui-cells__title">手机号</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="number" maxlength='11' confirm-type="done" placeholder="输入手机号" id="user_phone" name="user_phone" value='{{user_phone}}'  bindinput='inputPhone' />
+        </view>
+      </view>
+
+
+
+    </view>
+    <view class=" mt10">
+      <button class="btn "   bindtap='addCarnum'>提交</button>
+    </view>
+  </form>
+
+</view>
+ 

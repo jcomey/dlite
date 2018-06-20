@@ -1,0 +1,48 @@
+<!--pages/mine/mine.wxml-->
+<view class="userinfo">
+  <view style='height:35px; width:100%'>
+    <image src='http://img.lookcss.com/bg.svg' mode='widthFix' style='width:100%;top:-2px;position:relative;z-index:1;'></image>
+  </view>
+  <view style='position:relative;z-index:2;'>
+    <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
+  </view>
+
+  <view>
+
+    <button class="userinfo-nickname" wx:if="{{!logged}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+
+    <text class="userinfo-nickname" wx:else>{{userInfo.nickName}}</text>
+  </view>
+
+</view>
+
+<view class="weui-cells weui-cells_after-title  {{showView?'show':'hide'}}">
+  <navigator url="/pages/addCarnum/addCarnum" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__bd">添加我的车牌</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+
+</view>
+<view class="weui-cells weui-cells_after-title  {{added?'show':'hide'}}">
+
+<navigator url="/pages/edit/edit" class='weui-cell'>
+  <view class="weui-cell__bd">车牌号：{{user_carnum}}</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+</navigator>
+
+
+</view>
+
+
+<!-- <view style='color:#f00'>
+  <text class="request-text">{{user_name}}</text>
+  <text class="request-text">{{openid}}</text>
+</view> -->
+
+
+<!-- <view style='position:fixed;bottom:50px;right:10px'>
+<contact-button type="default-dark" size="32" session-from="weapp">
+ <view style='margin-top:5px;font-size:12px'>客服</view>
+</contact-button>
+</view> -->
+ 
