@@ -3,8 +3,8 @@
  */
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
-   var host = 'https://soadgugi.qcloud.la'; //开发环境
-  //  var host ='https://650929201.dlite.cn';  //生产环境
+   var host = '你的域名'; //开发环境
+   
 
 var config = {
 
